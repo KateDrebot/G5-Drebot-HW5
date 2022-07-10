@@ -9,8 +9,7 @@ public class MainClass {
 
         ArrayList<Integer> listInt = new ArrayList<>();
         Collections.addAll(listInt, 182, 11, 0, 12, 21, 7, 30);
-//        ArrayList<Integer> l=new ArrayList<Integer>(Arrays.asList(1,2,3,5,8,13,21));
-//        System.out.println(l);
+
         System.out.println(listInt);
 
         WorkWithList workWithList=new WorkWithList();
