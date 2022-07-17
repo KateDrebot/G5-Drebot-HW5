@@ -34,26 +34,26 @@ abstract class Currency {
         return kursNBU * marga;
     }
 
-    private double getKursSell(){
+    private double getKursSell() {
 
         return kursNBU / marga;
     }
 
     abstract String getCurrencyName();
 
-    public double exchangeGrnToCurrency(double numberOfGrn){
-        Double tempResult = numberOfGrn/getKursBuy();
+    public double exchangeGrnToCurrency(double numberOfGrn) {
+        Double tempResult = numberOfGrn / getKursBuy();
         //System.out.println("for "+numberOfGrn +"grn you get "+tempResult);
         System.out.println(String.format("for %s grn you get %s %s by kurs %s (marga %s)"
-                                   ,numberOfGrn,tempResult, getCurrencyName(),getKursBuy(),marga));
+                , numberOfGrn, tempResult, getCurrencyName(), getKursBuy(), marga));
         return tempResult;
     }
 
 
-    public double  exchangeCurrencyToGrn(double numberOfCurrency){
-        double tempResult = numberOfCurrency *getKursSell();
+    public double exchangeCurrencyToGrn(double numberOfCurrency) {
+        double tempResult = numberOfCurrency * getKursSell();
         System.out.println(String.format("for %s %s you get %s grn by kurs %s (marga %s)"
-                ,numberOfCurrency,getCurrencyName(),tempResult,getKursSell(),marga));
+                , numberOfCurrency, getCurrencyName(), tempResult, getKursSell(), marga));
         return tempResult;
     }
 
